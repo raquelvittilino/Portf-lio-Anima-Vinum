@@ -114,7 +114,7 @@
 </div>
 
 <main id="lista"></main>
-<div class="note">Revenda = 40% de desconto sobre o valor de lista · Valores em reais · Sujeito a disponibilidade de estoque</div>
+<div class="note">Valores em reais · Sujeito a disponibilidade de estoque</div>
 
 <div class="selbar" id="selbar">
   <div class="row">
@@ -202,7 +202,6 @@ function render(){
       '<div class="det">' + x.p + ' · ' + x.u + '</div>' +
       '<div class="badges">' + badges.join('') + '</div></div>' +
       '<div class="preco"><div class="v">' + fmt(x.preco) + '</div>' +
-      (!clienteMode && x.rev ? '<div class="r">revenda ' + fmt(x.rev) + '</div>' : '') +
       (!clienteMode ? '<div class="cod">' + x.c + '</div>' : '') + '</div>';
     d.querySelector('input').onchange = e => {
       e.target.checked ? sel.set(x.c + x.s, x) : sel.delete(x.c + x.s);
